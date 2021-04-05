@@ -5,6 +5,8 @@ import { Ionicons } from '@expo/vector-icons';
 import { AntDesign } from '@expo/vector-icons'; 
 
 import foto from './assets/foto.jpg';
+import Card from './components/Card';
+
 
 export default function App() {
 
@@ -44,31 +46,19 @@ export default function App() {
 
       </View>
 
-      <View style={styles.card_container}>
-        <View style={styles.card}>
-          <View style={styles.card_header}>
-            <Text>Experiência Profissional</Text>
-          </View>
-          <View style={styles.card_content}>
-            <Text style={styles.card_content_text}>Epione</Text>
-            <Text style={styles.card_content_text}>Condica</Text>
-            <Text style={styles.card_content_text}>Tecmdia</Text>
-          </View>
-        </View>
-      </View>
+      
+      <Card titulo='Formação Academcica'>
+          <Text style={styles.card_content_text}>UNINASSAU</Text>
+          <Text style={styles.card_content_text}>IFPE</Text>
+          <Text style={styles.card_content_text}>Supletivo</Text>
+      </Card>
 
-      <View style={styles.card_container}>
-        <View style={styles.card}>
-          <View style={styles.card_header}>
-            <Text>Formação</Text>
-          </View>
-          <View style={styles.card_content}>
-            <Text style={styles.card_content_text}>UNINASSAU</Text>
-            <Text style={styles.card_content_text}>IFPE</Text>
-            <Text style={styles.card_content_text}>Supletivo</Text>
-          </View>
-        </View>
-      </View>
+      <Card titulo='Experiência Profissional'>
+          <Text style={styles.card_content_text}>Epione</Text>
+          <Text style={styles.card_content_text}>Condica</Text>
+          <Text style={styles.card_content_text}>Tecmdia</Text>
+      </Card>
+      
       
       <StatusBar style="auto" />
     </View>
@@ -109,7 +99,7 @@ const styles = StyleSheet.create({
     marginHorizontal: 5,
     justifyContent: 'space-between',
     width: '60%',
-    paddingLeft: 45
+    paddingLeft: 5
     
   },
   card_container: {
